@@ -1,0 +1,13 @@
+Saturday 12/12/2020
+
+8:00 Email received
+10:30 Email read
+11:00 Start configuring environment
+12:20 First initial commit
+12:30 First hands dirty with the API
+13:00 - 13:00 Starting application design
+20:00 - 22:00 Starting development, creating basic components in react
+
+Sunday 13/12/2020
+
+09:00 starting backend development, create basic endpoint with express server

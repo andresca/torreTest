@@ -1,0 +1,90 @@
+hr.solid {
+    border-top: 3px solid #bbb;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#personData{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+#personData div:nth-child(1){
+    width: 10%;
+}
+
+#personData div:nth-child(2){
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+#personData div:nth-child(3){
+    width: 70%;
+    text-align: justify;
+}
+
+#skills_interests{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#skillsData ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#skillsData ul li{
+    margin: 5px 5px;
+    padding: 5px 10px;
+    border: 3px solid rgba(28,110,164,0.92);
+    border-radius: 19px 0px 21px 0px;
+}
+
+#interestData ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+#interestData ul li{
+    margin: 5px 5px;
+    padding: 5px 10px;
+    border: 3px solid rgba(28,110,164,0.92);
+    border-radius: 19px 0px 21px 0px;
+}
+
+#carreer{
+    display: flex;
+}
+
+#carreer>div{
+    width: 30%;
+}
+
+.jobElem, .educationElem{
+    display: flex;
+    border: 3px solid rgba(28,110,164,0.92);
+    border-radius: 7px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.jobElem>img{
+    height: 70px;
+    width: 20%;
+}
+
+.jobElem>div{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.educationElem{
+    display: flex;
+    flex-direction: column;
+}
