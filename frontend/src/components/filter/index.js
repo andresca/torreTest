@@ -17,15 +17,10 @@ const Filter = (props) => {
 
     return (
         <div id="filterElems">
-            <div id="searchType">
-                <ul>
-                    <li>People</li>
-                    <li>Companies</li>
-                </ul>
-            </div>
             <div id="searchOptions">
                 <ul>
-                    <li>Hola</li>
+                    <li>Part-time employment</li>
+                    <li>Freelance gigs</li>
                 </ul>
             </div>
         </div>
