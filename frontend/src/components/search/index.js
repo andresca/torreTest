@@ -1,29 +1,48 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import Axios from 'axios';
+import axios from 'axios';
+import env from "react-dotenv";
 
 import Filter from '../filter'
+import './search.css'
 
 const Search = (props) => {
 
     const searchResultList = useSelector(state => state.appReducer);
 
     useEffect( () => {
+        const requestData = {
+        }
+
         const fetchData = async () => {
-           const data = await Axios.post("https://search.torre.co/opportunities/_search/?currency=USD$&page=0&lang=en&size=10&aggregate=true&offset=0", 
-                {"and":[{"remote":{"term":false}},{"timezone":{"code":"GMT+10:00"}}]})
+            const data = await axios.post(`${env.BACKENDPATH}/searchTalent`, { requestData })
                 .then( response => response.data )
                 .catch( () => [] );
             return data;
         }
         fetchData().then( (data) => props.setSearchResult(data));
+
     }, []);
 
     return (
-        <div id="search">
-            <Filter {...props}/>
-            <div id="searchResult">
-                
+        <div id="search" hidden={props.hidden === 'bio'}>
+            <div id="search_elems">
+                <Filter {...props}/>
+                <div id="searchResult">
+                    {
+                        searchResultList.searchResult &&
+                        searchResultList.searchResult.results.map( (talent) => (
+                            <div className="founded">
+                                <img src={talent.picture} alt=""/>
+                                <div>
+                                    <label>{talent.name}</label>
+                                    <label>{talent.professionalHeadline}</label>
+                                    <label>{talent.locationName}</label>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

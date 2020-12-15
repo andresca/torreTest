@@ -10,4 +10,9 @@ Saturday 12/12/2020
 
 Sunday 13/12/2020
 
-09:00 starting backend development, create basic endpoint with express server
+09:00 - 12:00 starting backend development, create basic endpoint with express server
+12:00 - 15:00 Starting develop bio view
+
+Monday 14/12/2020
+
+20:45 - 23:00 Starting develop search job view

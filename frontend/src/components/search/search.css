@@ -1,0 +1,33 @@
+#search_elems{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#search_elems #searchResult{
+    width: 70%;
+}
+
+#search_elems #filterElems{
+    width: 30%;
+    border-right: 1px solid black;
+}
+
+.founded{
+    width: 80%;
+    display: flex;
+    border: 3px solid rgba(28,110,164,0.92);
+    border-radius: 7px;
+    margin: 10px 2%;
+    padding: 10px;
+}
+
+.founded img{
+    width: 20%;
+}
+
+.founded div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}

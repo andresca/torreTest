@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import './genome.css'
-import Filter from '../filter'
 
 const Genome = (props) => {
 
@@ -94,7 +93,7 @@ const Genome = (props) => {
             <label>Jobs</label>
             {   genomeInfo.jobs && 
                 genomeInfo.jobs.map( (elem) => 
-                    <div class="jobElem">
+                    <div className="jobElem">
                         <img src={elem.organizations[0].picture} alt=""></img>
                         <div>
                             <label>{elem.name}</label>
@@ -120,7 +119,7 @@ const Genome = (props) => {
             <label>Education</label>
             {   genomeInfo.education && 
                 genomeInfo.education.map( (elem) => 
-                    <div class="educationElem">
+                    <div className="educationElem">
                         <label>{elem.name}</label>
                         <label>{elem.organizations[0].name}</label>
                         <label>{elem.fromYear + "" + elem.fromMonth}</label>
@@ -131,10 +130,10 @@ const Genome = (props) => {
     )
 
     return (
-        <div id="search">
+        <div id="search" hidden={props.hidden === 'search'} >
             <div id="information">
                 <PersonData />
-                <hr class="solid" />
+                <hr className="solid" />
                 <div id="relevantInfo">
                     <div id="skills_interests">
                         <Skills />
